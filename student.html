@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title> Student Details </title>  <!-- Title on the page -->
+</head>
+<body>
+	<p id="Info"></p>
+	<script type="text/javascript">
+		var txt = " ";
+		var StudentDetails = {  /* variable with name Student details */
+			"Name" : "Akshay",
+			"DOB" : "8 December",
+			"Skill" : ["python", "Hadoop"],
+			"Address" : {                        /* Nested object has been created for address */
+				"city" : "Bangalore",
+				"state" : "Karnataka",
+				"Country" : "India",
+				"PinCode" : 560037,
+			}
+		};
+		StudentDetails.eyecolor = "Bluish"; 	 /* New property has been added to student details */
+		StudentDetails.mother_name = "Radha";
+
+		delete StudentDetails.Address.state;	/* deleting one property from the above properties */
+
+		/* displaying the object values */
+		
+		document.getElementById("Info").innerHTML = StudentDetails.Name + " was born on " + StudentDetails.DOB + " have skill " + StudentDetails.Skill[1] + " The city in which student lives is " + StudentDetails.Address.city + " and belongs to " + StudentDetails.Address.state + " country is " + StudentDetails.Address.Country + " Akshay eye color is " + StudentDetails.eyecolor + " and his mother name is " + StudentDetails.mother_name ;
+
+		/* Second wy of displaying values through alert box */
+
+		alert(StudentDetails.Name + " was born on " + StudentDetails.DOB + " have skill " + StudentDetails.Skill[1] + " The city in which student lives is " + StudentDetails.Address.city + " and belongs to " + StudentDetails.Address.state + " country is " + StudentDetails.Address.Country + " Akshay eye color is " + StudentDetails.eyecolor + " and his mother name is " + StudentDetails.mother_name );
+
+	</script>
+</body>
+</html>
